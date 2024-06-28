@@ -6,7 +6,7 @@
         <title>UCP 2 - 170, 176, 179</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
     
-
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,7 +70,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-8 mx-auto text-center">
                 <!-- Contact Form -->
-                
+                <div class="container">
                     <h3 class="mb-2">Send us a message</h3>
                     <p class="mb-4" style="color: white;">Please leave us a message using the form below. We'll get back to you as soon as possible.</p>
             
@@ -91,6 +91,36 @@
                         </div>
                     
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <script>
+                            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent the default form submit
+                    
+                                // Get form data
+                                let name = document.getElementById('name').value;
+                                let email = document.getElementById('email').value;
+                                let message = document.getElementById('message').value;
+                    
+                                // Example validation (you can add more)
+                                if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                                    // Show SweetAlert error message
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Oops...',
+                                        text: 'Please fill out all fields!',
+                                    });
+                                } else {
+                                    // Form data is valid, show success message
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Success!',
+                                        text: 'Your message has been sent successfully.',
+                                    });
+                    
+                                    // Optionally, you can submit the form using AJAX here
+                                    // Example: SubmitForm(name, email, message);
+                                }
+                            });
+                        </script>
                             </div>
                         </div>
                     </div>
@@ -174,24 +204,6 @@
 </div>
 <!-- Footer End -->
 
-
-<script>
-    // Event listener for form submission
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Get values from form inputs
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
-
-        // Construct the message to display in the alert
-        var alertMessage = 'Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message;
-
-        // Display the alert with the message
-        alert(alertMessage);
-    });
-</script>
 
 
         <footer class="container-fluid text-center py-3 bg-dark text-white">
