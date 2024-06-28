@@ -1,6 +1,39 @@
 
 /*** Spinner Start ***/
 /*** Spinner ***/
+/**service**/
+.service-content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.service-icon {
+    flex: 0 0 auto;
+}
+.service-content {
+    flex: 1 1 auto;
+}
+
+
+.service-content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.service-icon {
+    flex: 0 0 auto;
+}
+.service-content {
+    flex: 1 1 auto;
+}
+
+  .footer-logo {
+      font-size: 6em; /* Sesuaikan ukuran sesuai kebutuhan */
+      margin-top: 20px; /* Menempatkan logo lebih ke bawah */
+  }
+
 #spinner {
     opacity: 0;
     visibility: hidden;
