@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>UCP 2 - 170, 176, 179</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-UFYo0yCPrCD1z7O2K3l0jLoiMDW1OHVD+WZv0jG2yLpG1a+kBr1q+fGQ9Sbs5FW6I5z0xkAqCgkW6aP58A1G5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+          <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+              <a href="#" class="navbar-brand p-0">
+                  <img src="img/logo.png" alt="FlowerShop Logo" style="height: 40px; width: auto;">
+                 
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                  <span class="fa fa-bars"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a href="index.html" class="nav-link active">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="about.html" class="nav-link">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="contact.html" class="nav-link">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+      
+        <!-- Navbar & Hero End -->
+        <div class="container-fluid bg-breadcrumb" style="background-image: url('img/wallpaper.jpg'); background-size: cover; background-position: center center;">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">About Us</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <!-- Breadcrumb content -->
+                </ol>
+            </div>
+        </div>
+        
+        
+        <!-- Header Start -->
+        <div class="container-fluid destination py-5">
+          <div class="container py-5">
+              <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                  <h5 class="section-title px-3">Bunga Kami</h5>
+                  <h1 class="mb-0">Bunga Populer</h1>
+              </div>
+              <div class="tab-class text-center">
+                  <div class="tab-content">
+                      <div id="tab-1" class="tab-pane fade show p-0 active">
+                          <div class="row g-4">
+                              <div class="col-lg-4">
+                                  <div class="destination-img">
+                                      <img class="img-fluid rounded w-100" src="img/bungamatahari.jpg" alt="Bunga Matahari" data-toggle="modal" data-target="#modal-bunga-matahari">
+                                      <div class="destination-overlay p-4">
+                                 
+                                      </div>
+                                     
+                                      <div class="text-center mt-2">
+                                          <p class="mb-0">Bunga Matahari</p>
+                                      </div>
+                                  </div>
+                              </div>
+                                <div class="col-lg-4">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="img/bungamawar.jpeg" alt="Bunga Mawar" data-toggle="modal" data-target="#modal-bunga-mawar">
+                                        <div class="destination-overlay p-4">
+                                        </div>
+                                     
+                                        <div class="text-center mt-2">
+                                            <p class="mb-0">Bunga Mawar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="destination-img">
+                                        <img class="img-fluid rounded w-100" src="img/bungatulip.jpg" alt="Bunga Tulip" data-toggle="modal" data-target="#modal-bunga-tulip">
+                                        <div class="destination-overlay p-4">
+                                        </div>
+                                     
+                                        <div class="text-center mt-2">
+                                            <p class="mb-0">Bunga Tulip</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="destination-img">
+                                                        <img class="img-fluid rounded w-100" src="img/lili.jpg" alt="Bunga Lili" data-toggle="modal" data-target="#modal-bunga-lili">
+                                                        <div class="destination-overlay p-4">
+                                                        </div>
+                                     
+                                                        <div class="text-center mt-2">
+                                                            <p class="mb-0">Bunga Lili</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                      <div class="col-lg-4">
+                                                            <div class="destination-img">
+                                                                <img class="img-fluid rounded w-100" src="img/bungaaster.jpg" alt="Bunga Aster" data-toggle="modal" data-target="#modal-bunga-aster">
+                                                                    <div class="destination-overlay p-4">
+                                                                    </div>
+                                     
+                                                                    <div class="text-center mt-2">
+                                                                        <p class="mb-0">Bunga Aster</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                  <div class="col-lg-4">
+                                    <div class="destination-img">
+                                     <img class="img-fluid rounded w-100" src="img/bunga daisy.jpg" alt="Bunga Gerbera" data-toggle="modal" data-target="#modal-bunga-daisy">
+                                              <div class="destination-overlay p-4">
+                                              </div>
+                                     
+                                              <div class="text-center mt-2">
+                                                  <p class="mb-0">Bunga Daisy</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal for Bunga Matahari -->
+        <div class="modal fade" id="modal-bunga-matahari" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-matahari-label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-bunga-matahari-label">Bunga Matahari</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/bungamatahari.jpg" class="img-fluid rounded w-100" alt="Bunga Matahari">
+                <p>Bunga Matahari melambangkan kebahagiaan, kehangatan, dan energi positif. Cocok untuk memberikan kesan ceria dan menyegarkan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal for Bunga Mawar -->
+        <div class="modal fade" id="modal-bunga-mawar" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-mawar-label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-bunga-mawar-label">Bunga Mawar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/bungamawar.jpeg" class="img-fluid rounded w-100" alt="Bunga Mawar">
+                <p>Bunga Mawar melambangkan cinta dan keindahan. Bunga ini sering digunakan untuk menyampaikan perasaan yang mendalam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal for Bunga Tulip -->
+        <div class="modal fade" id="modal-bunga-tulip" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-tulip-label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-bunga-tulip-label">Bunga Tulip</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="img/bungatulip.jpg" class="img-fluid rounded w-100" alt="Bunga Tulip">
+                <p>Bunga Tulip melambangkan cinta yang sempurna dan kenyamanan. Cocok untuk berbagai momen spesial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+           <!-- Modal for Bunga Lili -->
+        <div class="modal fade" id="modal-bunga-lili" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-lili-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-bunga-lili-label">Bunga Lili</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/lili.jpg" class="img-fluid rounded w-100" alt="Bunga Lili">
+                  <p>Bunga Lili adalah simbol dari kemurnian dan keindahan. Dikenal dengan bentuk kelopaknya yang elegan dan harumnya yang khas, bunga ini sering digunakan dalam aransemen bunga dan taman untuk memberikan sentuhan yang anggun dan indah.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal for Bunga Aster -->
+        <div class="modal fade" id="modal-bunga-aster" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-aster-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-bunga-aster-label">Bunga Aster</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/bungaaster.jpg" class="img-fluid rounded w-100" alt="Bunga Aster">
+                  <p>Bunga Aster adalah simbol kesabaran dan keceriaan dengan bentuk bunga berbentuk bintang yang indah dan beragam warna.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal for Bunga Daisy -->
+        <div class="modal fade" id="modal-bunga-daisy" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-daisy-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-bunga-gerbera-label">Bunga Daisy</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/bunga daisy.jpg" class="img-fluid rounded w-100" alt="Bunga Daisy">
+                  <p>Bunga Daisy melambangkan kemurnian dan kesederhanaan. Dengan kelopak putih dan pusat kuning cerah, Daisy memberikan kesan segar dan alami, cocok untuk berbagai kesempatan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- Services Start -->
+<div class="container-fluid bg-light service py-5">
+  <div class="container py-5">
+      <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+          <h5 class="section-title px-3">Layanan Kami</h5>
+          <h1 class="mb-0">Toko Bunga</h1>
+      </div>
+      <div class="row g-4 align-items-center">
+          <!-- Kolom kiri -->
+          <div class="col-lg-6">
+              <div class="row g-4">
+                  <div class="col-6">
+                      <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
+                          <div class="service-icon p-3">
+                              <i class="fas fa-seedling fa-3x text-primary"></i>
+                          </div>
+                          <div class="service-content">
+                              <h5 class="mb-3">Pilihan Bunga Segar</h5>
+                              <p class="mb-0">Menyediakan berbagai macam bunga segar untuk berbagai keperluan seperti dekorasi, hadiah, atau acara khusus.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
+                          <div class="service-icon p-3">
+                              <i class="fas fa-hand-holding-heart fa-3x text-primary"></i>
+                          </div>
+                          <div class="service-content">
+                              <h5 class="mb-3">Pelayanan Ramah</h5>
+                              <p class="mb-0">Memberikan pelayanan yang ramah dan profesional untuk membantu dalam memilih dan merawat bunga.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
+                          <div class="service-icon p-3">
+                              <i class="fas fa-truck fa-3x text-primary"></i>
+                          </div>
+                          <div class="service-content">
+                              <h5 class="mb-3">Pengiriman Cepat</h5>
+                              <p class="mb-0">Menyediakan layanan pengiriman bunga yang cepat dan aman ke lokasi yang diinginkan.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
+                        <div class="service-icon p-3">
+                            <i class="fas fa-hand-holding-heart fa-3x text-primary"></i>
+                        </div>
+                        <div class="service-content">
+                            <h5 class="mb-3">Harga Terjangkau</h5>
+                            <p class="mb-0">Menawarkan harga yang terjangkau untuk berbagai jenis bunga dan layanan yang disediakan</p>
+                        </div>
+                    </div>
+                </div>
+                  
+              </div>
+          </div>
+          <!-- Kolom kanan -->
+           
+          <div class="col-lg-4">
+            <img src="img/bungamatahari.jpg" class="img-fluid rounded float-end" style="max-width: 100%;" alt="Bunga Matahari">
+        </div>
+          </div>
+      </div>
+      <div class="row mt-4">
+          <div class="col-12">
+              
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Services End -->
+
+<!-- CSS -->
+<style>
+  .service-content-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+  .service-icon {
+      flex: 0 0 auto;
+  }
+  .service-content {
+      flex: 1 1 auto;
+  }
+</style>
+
+
+<!-- CSS -->
+<style>
+  .service-content-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+  .service-icon {
+      flex: 0 0 auto;
+  }
+  .service-content {
+      flex: 1 1 auto;
+  }
+</style>
+
+
+<!-- CSS -->
+<style>
+    .footer-logo {
+        font-size: 6em; /* Sesuaikan ukuran sesuai kebutuhan */
+        margin-top: 20px; /* Menempatkan logo lebih ke bawah */
+    }
+</style>
+
+<!-- Footer Start -->
+<div class="container-fluid footer py-5">
+  <div class="container py-5">
+      <div class="row g-5">
+          <div class="col-md-6 col-lg-6 col-xl-3 d-flex justify-content-center">
+              <div class="footer-item d-flex flex-column align-items-center">
+                  <a href="#"><img src="img/logo.png" alt="FlowerShop Logo" class="footer-logo mb-4" style="height: 60px; width: auto;"></a>
+              </div>
+          </div>
+          <!-- Kolom-kolom lainnya -->
+          <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="footer-item d-flex flex-column">
+                  <h4 class="mb-4 text-white">Links</h4>
+                  <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                  <a href="about.html"><i class="fas fa-angle-right me-2"></i> About</a>
+                  <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="footer-item d-flex flex-column">
+                  <a href="mailto:flowershop@example.com"><i class="fas fa-angle-right me-2"></i> floweshop@example.com</a>
+                  <a href="https://wa.me/1234567890"><i class="fas fa-angle-right me-2"></i> +012 345 67890</a>
+                  <div class="d-flex align-items-center">
+                      <i class="fas fa-share fa-2x text-white me-2"></i>
+                      <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.facebook.com/yourprofile"><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.twitter.com/yourprofile"><i class="fab fa-twitter"></i></a>
+                      <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.instagram.com/yourprofile"><i class="fab fa-instagram"></i></a>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+
+        
+<footer class="container-fluid text-center py-3 bg-dark text-white">
+    <p>&copy; Flowershop 2024. All rights reserved.</p>
+</footer>
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
