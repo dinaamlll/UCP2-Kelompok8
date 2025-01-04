@@ -1,415 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maniekbydo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <head>
-        <meta charset="utf-8">
-        <title>UCP 2 - 170, 176, 179</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      
-<!-- Bootstrap CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-UFYo0yCPrCD1z7O2K3l0jLoiMDW1OHVD+WZv0jG2yLpG1a+kBr1q+fGQ9Sbs5FW6I5z0xkAqCgkW6aP58A1G5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- jQuery and Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .header {
+            background-color: #f8c1d1;
+        }
+        .nav {
+            background-color: #1a2a6c;
+        }
+        .gradient-bg {
+            background: linear-gradient(180deg, #ffffff 0%, #d3d3d3 100%);
+        }
+        .title {
+            font-family: 'Dancing Script', cursive;
+        }
+        .press-section {
+            background-image: url('img/backgroundkontak.jpg'); 
+            background-size: 80%;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 200px 0;
+            text-align: center;
+            color: white;
+        }
+        .press-section h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .press-section h1 {
+            font-size: 4rem;
+            margin-top: 10px;
+        }
+        .form-section {
+            background-image: url('img/form.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 80px 0;
+        }
+        .form-container {
+            padding: 2rem;
+            color: white;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 8px;
+            background-color: transparent;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            background-color: #FF6F61;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        .form-container button:hover {
+            background-color: #e65f51;
+            transform: translateY(-2px);
+        }
+        .instagram-link {
+        display: inline-flex;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+    .instagram-link:hover {
+        transform: scale(1.1); /* Efek timbul saat hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    }
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    .instagram-link:active {
+        transform: scale(1.05); /* Sedikit memperkecil saat diklik */
+    }
+    /* Efek untuk Phone */
+    .phone-link {
+        display: inline-flex;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
+    .phone-link:hover {
+        transform: scale(1.1); /* Efek timbul saat hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    }
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-          <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-              <a href="about.html" class="navbar-brand p-0 d-flex align-items-center">
-                  <img src="img/logo.png" alt="FlowerShop Logo" style="height: 40px; width: auto;">
-                  <span style="font-size: 1.5em; font-weight: bold; margin-left: 10px;">FlowerShop</span>
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                  <span class="fa fa-bars"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
-                  <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a href="index.html" class="nav-link active">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="about.html" class="nav-link">About</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="contact.html" class="nav-link">Contact</a>
-                      </li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
-      
-      
-        <!-- Navbar & Hero End -->
-        <div class="container-fluid bg-breadcrumb" style="background-image: url('img/wallpaper.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
-          <div class="container text-center py-5" style="max-width: 900px; backdrop-filter: blur(0);">
-      
-                <h3 class="text-white display-3 mb-4">About Us</h1>
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <!-- Breadcrumb content -->
-                </ol>
-            </div>
-        </div>
+    .phone-link:active {
+        transform: scale(1.05); /* Sedikit memperkecil saat diklik */
+    }
+    /* Efek hover pada navbar link */
+.nav-link:hover {
+   
+    text-decoration: underline; /* Tambahkan garis bawah */
+    transform: translateY(-3px); /* Efek pergeseran ke atas */
+    transition: all 0.3s ease; /* Efek transisi halus */
+}
+.nav-link:hover {
         
+        text-decoration: underline; /* Menambahkan garis bawah */
+        transform: translateY(-3px); /* Efek pergeseran ke atas */
+        transition: all 0.3s ease; /* Efek transisi */
+    }
+</style>
+    </style>
+</head>
+<body class="text-gray-800">
+<!-- Top Header -->
+<div class="header text-center py-2 text-sm text-blue-900 flex justify-between items-center px-4">
+    <div class="flex items-center space-x-4">
+        <!-- Phone Number Link with Hover and Active Effect -->
+        <a href="tel:+6282124708761" class="text-white phone-link">
+            <i class="fas fa-phone-alt"></i> +62821-2470-8761
+        </a>
         
-        <!-- Header Start -->
-        <div class="container-fluid destination py-5">
-          <div class="container py-5">
-              <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                  <h5 class="section-title px-3">Bunga Kami</h5>
-                  <h1 class="mb-0">Bunga Populer</h1>
-              </div>
-              <div class="tab-class text-center">
-                  <div class="tab-content">
-                      <div id="tab-1" class="tab-pane fade show p-0 active">
-                          <div class="row g-4">
-                              <div class="col-lg-4">
-                                  <div class="destination-img">
-                                      <img class="img-fluid rounded w-100" src="img/bungamatahari.jpg" alt="Bunga Matahari" data-toggle="modal" data-target="#modal-bunga-matahari">
-                                      <div class="destination-overlay p-4">
-                                 
-                                      </div>
-                                     
-                                      <div class="text-center mt-2">
-                                          <p class="mb-0">Bunga Matahari</p>
-                                      </div>
-                                  </div>
-                              </div>
-                                <div class="col-lg-4">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/bungamawar.jpeg" alt="Bunga Mawar" data-toggle="modal" data-target="#modal-bunga-mawar">
-                                        <div class="destination-overlay p-4">
-                                        </div>
-                                     
-                                        <div class="text-center mt-2">
-                                            <p class="mb-0">Bunga Mawar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/bungatulip.jpg" alt="Bunga Tulip" data-toggle="modal" data-target="#modal-bunga-tulip">
-                                        <div class="destination-overlay p-4">
-                                        </div>
-                                     
-                                        <div class="text-center mt-2">
-                                            <p class="mb-0">Bunga Tulip</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="destination-img">
-                                                        <img class="img-fluid rounded w-100" src="img/lili.jpg" alt="Bunga Lili" data-toggle="modal" data-target="#modal-bunga-lili">
-                                                        <div class="destination-overlay p-4">
-                                                        </div>
-                                     
-                                                        <div class="text-center mt-2">
-                                                            <p class="mb-0">Bunga Lili</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                      <div class="col-lg-4">
-                                                            <div class="destination-img">
-                                                                <img class="img-fluid rounded w-100" src="img/bungaaster.jpg" alt="Bunga Aster" data-toggle="modal" data-target="#modal-bunga-aster">
-                                                                    <div class="destination-overlay p-4">
-                                                                    </div>
-                                     
-                                                                    <div class="text-center mt-2">
-                                                                        <p class="mb-0">Bunga Aster</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                  <div class="col-lg-4">
-                                    <div class="destination-img">
-                                     <img class="img-fluid rounded w-100" src="img/bunga daisy.jpg" alt="Bunga Gerbera" data-toggle="modal" data-target="#modal-bunga-daisy">
-                                              <div class="destination-overlay p-4">
-                                              </div>
-                                     
-                                              <div class="text-center mt-2">
-                                                  <p class="mb-0">Bunga Daisy</p>
-                                              </div>
-                                          </div>
-                                      </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Bunga Matahari -->
-        <div class="modal fade" id="modal-bunga-matahari" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-matahari-label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modal-bunga-matahari-label">Bunga Matahari</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="img/bungamatahari.jpg" class="img-fluid rounded w-100" alt="Bunga Matahari">
-                <p>Bunga Matahari melambangkan kebahagiaan, kehangatan, dan energi positif. Cocok untuk memberikan kesan ceria dan menyegarkan.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Modal for Bunga Mawar -->
-        <div class="modal fade" id="modal-bunga-mawar" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-mawar-label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modal-bunga-mawar-label">Bunga Mawar</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="img/bungamawar.jpeg" class="img-fluid rounded w-100" alt="Bunga Mawar">
-                <p>Bunga Mawar melambangkan cinta dan keindahan. Bunga ini sering digunakan untuk menyampaikan perasaan yang mendalam.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Modal for Bunga Tulip -->
-        <div class="modal fade" id="modal-bunga-tulip" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-tulip-label" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modal-bunga-tulip-label">Bunga Tulip</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="img/bungatulip.jpg" class="img-fluid rounded w-100" alt="Bunga Tulip">
-                <p>Bunga Tulip melambangkan cinta yang sempurna dan kenyamanan. Cocok untuk berbagai momen spesial.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-           <!-- Modal for Bunga Lili -->
-        <div class="modal fade" id="modal-bunga-lili" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-lili-label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modal-bunga-lili-label">Bunga Lili</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <img src="img/lili.jpg" class="img-fluid rounded w-100" alt="Bunga Lili">
-                  <p>Bunga Lili adalah simbol dari kemurnian dan keindahan. Dikenal dengan bentuk kelopaknya yang elegan dan harumnya yang khas, bunga ini sering digunakan dalam aransemen bunga dan taman untuk memberikan sentuhan yang anggun dan indah.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        <!-- Modal for Bunga Aster -->
-        <div class="modal fade" id="modal-bunga-aster" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-aster-label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modal-bunga-aster-label">Bunga Aster</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <img src="img/bungaaster.jpg" class="img-fluid rounded w-100" alt="Bunga Aster">
-                  <p>Bunga Aster adalah simbol kesabaran dan keceriaan dengan bentuk bunga berbentuk bintang yang indah dan beragam warna.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        <!-- Modal for Bunga Daisy -->
-        <div class="modal fade" id="modal-bunga-daisy" tabindex="-1" role="dialog" aria-labelledby="modal-bunga-daisy-label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modal-bunga-gerbera-label">Bunga Daisy</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <img src="img/bunga daisy.jpg" class="img-fluid rounded w-100" alt="Bunga Daisy">
-                  <p>Bunga Daisy melambangkan kemurnian dan kesederhanaan. Dengan kelopak putih dan pusat kuning cerah, Daisy memberikan kesan segar dan alami, cocok untuk berbagai kesempatan.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-<!-- Services Start -->
-<div class="container-fluid bg-light service py-5">
-  <div class="container py-5">
-      <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-          <h5 class="section-title px-3">Layanan Kami</h5>
-          <h1 class="mb-0">Toko Bunga</h1>
-      </div>
-      <div class="row g-4 align-items-center">
-          <!-- Kolom kiri -->
-          <div class="col-lg-6">
-              <div class="row g-4">
-                  <div class="col-6">
-                      <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
-                          <div class="service-icon p-3">
-                              <i class="fas fa-seedling fa-3x text-primary"></i>
-                          </div>
-                          <div class="service-content">
-                              <h5 class="mb-3">Pilihan Bunga Segar</h5>
-                              <p class="mb-0">Menyediakan berbagai macam bunga segar untuk berbagai keperluan seperti dekorasi, hadiah, atau acara khusus.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-6">
-                      <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
-                          <div class="service-icon p-3">
-                              <i class="fas fa-hand-holding-heart fa-3x text-primary"></i>
-                          </div>
-                          <div class="service-content">
-                              <h5 class="mb-3">Pelayanan Ramah</h5>
-                              <p class="mb-0">Memberikan pelayanan yang ramah dan profesional untuk membantu dalam memilih dan merawat bunga.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-6">
-                      <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
-                          <div class="service-icon p-3">
-                              <i class="fas fa-truck fa-3x text-primary"></i>
-                          </div>
-                          <div class="service-content">
-                              <h5 class="mb-3">Pengiriman Cepat</h5>
-                              <p class="mb-0">Menyediakan layanan pengiriman bunga yang cepat dan aman ke lokasi yang diinginkan.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-3">
-                        <div class="service-icon p-3">
-                            <i class="fas fa-hand-holding-heart fa-3x text-primary"></i>
-                        </div>
-                        <div class="service-content">
-                            <h5 class="mb-3">Harga Terjangkau</h5>
-                            <p class="mb-0">Menawarkan harga yang terjangkau untuk berbagai jenis bunga dan layanan yang disediakan</p>
-                        </div>
-                    </div>
-                </div>
-                  
-              </div>
-          </div>
-          <!-- Kolom kanan -->
-           
-          <div class="col-lg-4">
-            <img src="img/bungamatahari.jpg" class="img-fluid rounded float-end" style="max-width: 100%;" alt="Bunga Matahari">
-        </div>
-          </div>
-      </div>
-      <div class="row mt-4">
-          <div class="col-12">
-              
-          </div>
-      </div>
-  </div>
+        <!-- Instagram Link with Hover and Active Effect -->
+        <a href="https://www.instagram.com/maniekbydo" target="_blank" class="text-white instagram-link">
+            <i class="fab fa-instagram"></i> Maniekbydo
+        </a>
+    </div>
 </div>
-<!-- Services End -->
+<nav class="nav text-white py-6">
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="absolute left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-2">
+            <img src="img/logomanikmanik.jpg" alt="Maniekbydo Logo" class="h-12 w-12 rounded-full object-cover">
+            <h1 class="text-4xl font-bold text-pink-300">Maniekbydo</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-pink-300 nav-link">Home</a>
+            <a href="shop.html" class="text-pink-300 nav-link">Shop</a>
+            <a href="about.html" class="text-pink-300 nav-link">About Us</a>
+            <a href="contact.html" class="text-pink-300 nav-link">Contact Us</a>
+        </div>
+    </div>
+</nav>
 
-
-
-
-<!-- Footer Start -->
-<div class="container-fluid footer py-5">
-  <div class="container py-5">
-      <div class="row g-5">
-          <div class="col-md-6 col-lg-6 col-xl-3 d-flex justify-content-center">
-              <div class="footer-item d-flex flex-column align-items-center">
-                  <a href="#"><img src="img/logo.png" alt="FlowerShop Logo" class="footer-logo mb-4" style="height: 60px; width: auto;"></a>
-              </div>
-          </div>
-          <!-- Kolom-kolom lainnya -->
-          <div class="col-md-6 col-lg-6 col-xl-3">
-              <div class="footer-item d-flex flex-column">
-                  <h4 class="mb-4 text-white">Links</h4>
-                  <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
-                  <a href="about.html"><i class="fas fa-angle-right me-2"></i> About</a>
-                  <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
-              </div>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-3">
-              <div class="footer-item d-flex flex-column">
-                  <a href="mailto:flowershop@example.com"><i class="fas fa-angle-right me-2"></i> floweshop@example.com</a>
-                  <a href="https://wa.me/1234567890"><i class="fas fa-angle-right me-2"></i> +012 345 67890</a>
-                  <div class="d-flex align-items-center">
-                      <i class="fas fa-share fa-2x text-white me-2"></i>
-                      <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.facebook.com/yourprofile"><i class="fab fa-facebook-f"></i></a>
-                      <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.twitter.com/yourprofile"><i class="fab fa-twitter"></i></a>
-                      <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.instagram.com/yourprofile"><i class="fab fa-instagram"></i></a>
-
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+<!-- Header Section -->
+<section class="bg-cover bg-center py-10" style="background-image: url('img/backgroundabout.avif');">
+    <div class="container mx-auto flex items-center justify-between space-x-6">
+        <!-- Text Section -->
+<div class="text-center md:text-left w-full md:w-1/2 pl-9">
+    <h1 class="text-purple-600 text-lg font-bold">
+        WE'RE SO HAPPY YOU'RE HERE
+    </h1>
+    <h2 class="text-5xl font-bold text-pink-500 mt-2">
+        ABOUT US
+    </h2>
+    <p class="text-gray-600 mt-4 max-w-2xl mx-auto md:mx-0">
+        Maniekbydo adalah toko perhiasan tangan yang mengkhususkan diri dalam membuat produk unik menggunakan manik-manik berkualitas tinggi. Kami menawarkan berbagai produk termasuk cincin, gelang, kalung, dan aksesoris lainnya yang sempurna untuk setiap kesempatan. Setiap koleksi kami dirancang dengan penuh perhatian dan kreativitas untuk memastikan setiap produk adalah karya yang istimewa.
+        
 </div>
-<!-- Footer End -->
+
+        <!-- Image Section -->
+        <div class="mt-10 md:mt-0 w-full md:w-1/2 flex justify-center md:justify-end">
+            <img alt="Two women posing in stylish outfits" class="rounded-lg shadow-lg" height="400" src="img/halamanabout.jpg" width="400"/>
+        </div>
+    </div>
+</section>
 
 
 
-        
-<footer class="container-fluid text-center py-3 bg-dark text-white">
-    <p>&copy; Flowershop 2024. All rights reserved.</p>
-</footer>
+<body class="bg-white">
+    <div class="container mx-auto px-4 py-8">
+     <h1 class="text-center text-2xl font-bold mb-8">
+      SHOP OUR BEST SELLERS
+     </h1>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center">
+       <img alt="Pink macarons on a striped plate with a flamingo decoration" class="w-full h-auto" height="300" src="img/cincinperi.jpg" width="300"/>
+       <h2 class="mt-4 text-lg font-bold">
+        Cincin Peri
+    </h2>
+    <p class="text-gray-700">
+     Rp. 3.00
+    </p>
+   </div>
+   <div class="text-center">
+    <img alt="Woman with pink heart-shaped glasses holding donuts" class="w-full h-auto" height="300" src="img/RibbonBracelet.jpg" width="300"/>
+    <h2 class="mt-4 text-lg font-bold">
+     Gelang Pita
+    </h2>
+    <p class="text-gray-700">
+     Rp. 15.00
+    </p>
+   </div>
+   <div class="text-center">
+    <img alt="Yellow mug with white daisies" class="w-full h-auto" height="300" src="img/gantunganhpbunga.jpg" width="300"/>
+    <h2 class="mt-4 text-lg font-bold">
+     Gantungan Hp Bunga
+    </h2>
+    <p class="text-gray-700">
+        Rp. 15.00
+       </p>
+      </div>
+      <div class="text-center relative">
+       <img alt="Tray with a flower, coffee, muffin, and macarons" class="w-full h-auto" height="300" src="img/kalungchery.jpg" width="300"/>
+       <h2 class="mt-4 text-lg font-bold">
+        Kalung Chery
+       </h2>
+       <p class="text-gray-700">
+        Rp. 18.00
+       </p>
+    </div>
+</div>
+    </div>
+   <!-- Our Mission Section -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold">
+            Our Mission
+        </h2>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <i class="fas fa-gem text-4xl text-purple-600"></i> <!-- Ikon untuk UNIQUE -->
+                <h3 class="text-xl font-bold mt-4">
+                    UNIQUE
+                </h3>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-tags text-4xl text-purple-600"></i> <!-- Ikon untuk AFFORDABLE -->
+                <h3 class="text-xl font-bold mt-4">
+                    AFFORDABLE
+                </h3>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-shield-alt text-4xl text-purple-600"></i> <!-- Ikon untuk DURABLE -->
+                <h3 class="text-xl font-bold mt-4">
+                    DURABLE
+                </h3>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-star text-4xl text-purple-600"></i> <!-- Ikon untuk HIGH-QUALITY -->
+                <h3 class="text-xl font-bold mt-4">
+                    HIGH-QUALITY
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+<body class="bg-purple-200 text-gray-700">
+    <!-- Pastikan body hanya ada satu elemen <body> -->
+ <footer class="bg-gray-900 text-white py-8">
+     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+         <!-- Logo Section -->
+         <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
+             <img alt="Pink flower" class="w-16 h-16 mb-4 rounded-full" height="100" src="img/logomanikmanik.jpg" width="100"/>
+         </div>
+ 
+ 
+             <!-- Links Section -->
+             <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
+                <h2 class="text-3xl font-bold mb-2">Links</h2>
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
-
-</html>
+                 <ul>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="index.html" class="text-white">Home</a>
+                     </li> <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="shop.html" class="text-white">Shop</a>
+                     </li>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="about.html" class="text-white">About Us</a>
+                     </li>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="contact.html" class="text-white">Contact Us</a>
+                     </li>
+                 </ul>
+             </div>
+ 
+            <!-- Contact Information Section -->
+ <div class="flex flex-col items-center md:items-start">
+     <ul>
+         <li class="mb-2">
+             <i class="fas fa-chevron-right mr-2"></i>
+             Maniekbydo
+         </li>
+         <li class="mb-2">
+             <i class="fas fa-chevron-right mr-2"></i>
+             <a href="https://wa.me/6282124708761" class="text-white">+6282124708761</a>
+         </li>
+     </ul>
+     <div class="flex space-x-4 mt-4">
+         <!-- WhatsApp Icon -->
+         <a class="text-green-500" href="https://wa.me/6282124708761">
+             <i class="fab fa-whatsapp"></i>
+         </a>
+         <!-- Instagram Icon -->
+         <a class="text-blue-500" href="https://www.instagram.com/Maniekbydo/">
+             <i class="fab fa-instagram"></i>
+         </a>
+     </div>
+ </div>
+         </div>
+         <!-- Footer Copyright -->
+         <div class="text-center mt-8">
+             <p>© Maniekbydo 2024. All rights reserved.</p>
+         </div>
+ 
+         <!-- Scroll to Top Button -->
+         <div class="fixed bottom-4 right-4">
+             <a class="bg-blue-500 text-white p-3 rounded-full shadow-lg" href="#">
+                 <i class="fas fa-arrow-up"></i>
+             </a>
+         </div>
+     </footer>
+ </body>
+ </html>
+ 

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maniekbydo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .header {
+            background-color: #f8c1d1;
+        }
+        .nav {
+            background-color: #1a2a6c;
+        }
+        .gradient-bg {
+            background: linear-gradient(180deg, #ffffff 0%, #d3d3d3 100%);
+        }
+        .title {
+            font-family: 'Dancing Script', cursive;
+        }
+        .press-section {
+            background-image: url('img/kontak.jpg'); 
+            background-size: 80%;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 200px 0;
+            text-align: center;
+            color: white;
+        }
+        .press-section h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .press-section h1 {
+            font-size: 4rem;
+            margin-top: 10px;
+        }
+        
+        .instagram-link {
+        display: inline-flex;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .instagram-link:hover {
+        transform: scale(1.1); /* Efek timbul saat hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    }
+
+    .instagram-link:active {
+        transform: scale(1.05); /* Sedikit memperkecil saat diklik */
+    }
+    /* Efek untuk Phone */
+    .phone-link {
+        display: inline-flex;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .phone-link:hover {
+        transform: scale(1.1); /* Efek timbul saat hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    }
+
+    .phone-link:active {
+        transform: scale(1.05); /* Sedikit memperkecil saat diklik */
+    }
+    /* Efek hover pada navbar link */
+.nav-link:hover {
+    
+    text-decoration: underline; /* Tambahkan garis bawah */
+    transform: translateY(-3px); /* Efek pergeseran ke atas */
+    transition: all 0.3s ease; /* Efek transisi halus */
+}
+.nav-link:hover {
+ 
+        text-decoration: underline; /* Menambahkan garis bawah */
+        transform: translateY(-3px); /* Efek pergeseran ke atas */
+        transition: all 0.3s ease; /* Efek transisi */
+    }
+    
+    
+</style>
+    </style>
+</head>
+<body class="text-gray-800">
+<!-- Top Header -->
+<div class="header text-center py-2 text-sm text-blue-900 flex justify-between items-center px-4">
+    <div class="flex items-center space-x-4">
+        <!-- Phone Number Link with Hover and Active Effect -->
+        <a href="tel:+6282124708761" class="text-white phone-link">
+            <i class="fas fa-phone-alt"></i> +62821-2470-8761
+        </a>
+        
+        <!-- Instagram Link with Hover and Active Effect -->
+        <a href="https://www.instagram.com/maniekbydo" target="_blank" class="text-white instagram-link">
+            <i class="fab fa-instagram"></i> Maniekbydo
+        </a>
+    </div>
+</div>
+<nav class="nav text-white py-6">
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="absolute left-1/2 transform -translate-x-1/2 text-center flex items-center space-x-2">
+            <img src="img/logomanikmanik.jpg" alt="Maniekbydo Logo" class="h-12 w-12 rounded-full object-cover">
+            <h1 class="text-4xl font-bold text-pink-300">Maniekbydo</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-pink-300 nav-link">Home</a>
+            <a href="shop.html" class="text-pink-300 nav-link">Shop</a>
+            <a href="about.html" class="text-pink-300 nav-link">About Us</a>
+            <a href="contact.html" class="text-pink-300 nav-link">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+    <div class="container mx-auto mt-16 px-4">
+        <div class="relative">
+            <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600"></i>
+            <input type="text" id="search" placeholder="Search for products..." class="w-full py-2 pl-10 pr-4 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+    </div>
+
+    <div class="container mx-auto py-8 px-4">
+        <h2 class="text-3xl font-semibold text-center mb-8">Our Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="productContainer">
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gelang Kuromi">
+                <img src="img/gelangkuromi.jpg" alt="Product 1" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gelang Kuromi</h3>
+                    <p class="text-gray-600">Rp12.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Gelang Kuromi" data-description="Gelang Kuromi dengan desain menarik dan nyaman dipakai. Terbuat dari bahan berkualitas." data-img="img/gelangkuromi.jpg">View Product</button>
+                </div>
+            </div>
+            
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gelang Simple">
+                <img src="img/gelangsimple.jpg" alt="Product 2" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gelang Simple</h3>
+                    <p class="text-gray-600">Rp12.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" 
+                            data-product="Gelang Simple" 
+                            data-description="Gelang simpel dengan desain minimalis yang cocok untuk berbagai gaya. Dapat dipakai di acara formal maupun santai. Terbuat dari bahan yang nyaman dan awet." 
+                            data-img="img/gelangsimple.jpg">View Product</button>
+                </div>
+            </div>
+            
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gelang Pita">
+                <img src="img/RibbonBracelet.jpg" alt="Product 3" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gelang Pita</h3>
+                    <p class="text-gray-600">Rp15.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Gelang Pita" data-description="Gelang dengan desain pita cantik yang menambah kesan manis dan elegan. Dibuat dari bahan berkualitas, cocok untuk memberi sentuhan gaya pada penampilan sehari-hari." data-img="img/RibbonBracelet.jpg">View Product</button>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gelang Mermaid">
+                <img src="img/gelangmermaid.jpg" alt="Product 3" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gelang Mermaid</h3>
+                    <p class="text-gray-600">Rp14.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Gelang Mermaid" data-description="Gelang dengan desain indah yang terinspirasi oleh keanggunan putri duyung, dihiasi dengan warna laut dan aksen mutiara. Memberikan sentuhan magis pada penampilan Anda, cocok untuk gaya santai atau pesta." data-img="img/gelangmermaid.jpg">View Product</button>
+
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gantungan Hp Mutiara">
+                <img src="img/TaliponselMutiara.jpg" alt="Product 4" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gantungan Hp Mutiara</h3>
+                    <p class="text-gray-600">Rp15.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Gantungan Handphone Mutiara" data-description="Gantungan handphone dengan sentuhan mutiara yang elegan. Memberikan kesan mewah pada handphone Anda." data-img="img/TaliponselMutiara.jpg">View Product</button>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gantungan Hp Ungu">
+                <img src="img/Gantunganhpungu.jpg" alt="Product 5" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gantungan Hp Ungu</h3>
+                    <p class="text-gray-600">Rp12.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Gantungan Handphone Ungu" data-description="Gantungan handphone dengan warna ungu yang mencolok dan elegan. Desainnya simpel namun menarik, memberikan kesan stylish pada handphone Anda." data-img="img/Gantunganhpungu.jpg">View Product</button>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gantungan Pink">
+                <img src="img/GantunganHpPink.jpg" alt="Product 6" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gantungan Hp Pink</h3>
+                    <p class="text-gray-600">Rp12.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Gantungan Handphone Pink" data-description="Gantungan handphone dengan warna pink yang feminin dan cerah. Memberikan aksen cantik pada handphone Anda dan cocok digunakan untuk segala usia." data-img="img/GantunganHpPink.jpg">View Product</button>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Gantungan Hp Bunga">
+                <img src="img/gantunganhpbunga.jpg" alt="Product 7" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Gantungan Hp Bunga</h3>
+                    <p class="text-gray-600">Rp15.000</p>
+                    <!-- Updated description in data-description attribute -->
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Gantungan Handphone Bunga" data-description="Gantungan handphone bunga dengan desain warna pink cerah yang elegan. Memberikan sentuhan feminin pada tampilan handphone Anda, cocok untuk segala usia dan aktivitas." data-img="img/gantunganhpbunga.jpg">View Product</button>
+                </div>
+            </div>
+            
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Cincin Hitam">
+                <img src="img/ringblackedition.jpg" alt="Product 8" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Cincin Hitam</h3>
+                    <p class="text-gray-600">Rp3.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Cincin Hitam" data-description="Cincin dengan desain modern dan warna hitam yang elegan. Cocok untuk menambah gaya Anda, baik untuk penggunaan sehari-hari maupun acara khusus. " data-img="img/ringblackedition.jpg">View Product</button>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Cincin Pastel ">
+                <img src="img/cincinpastel.jpg" alt="Product 9" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Cincin Pastel</h3>
+                    <p class="text-gray-600">Rp3.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Cincin Pastel" data-description="Cincin dengan desain modern dan warna hitam yang elegan. Cocok untuk menambah gaya Anda, baik untuk penggunaan sehari-hari maupun acara khusus. " data-img="img/cincinpastel.jpg">View Product</button>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="Cincin Peri">
+                <img src="img/cincinperi.jpg" alt="Product 9" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Cincin Peri</h3>
+                    <p class="text-gray-600">Rp3.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="Cincin Peri" data-description="Cincin dengan desain magis yang terinspirasi oleh dunia peri, dihiasi dengan detail halus dan batu berkilau. Cocok untuk Anda yang menyukai aksesori yang unik dan penuh pesona." data-img="img/cincinperi.jpg">View Product</button>
+
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden" data-name="KalungChery ">
+                <img src="img/kalungchery.jpg" alt="Product 10" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="text-xl font-semibold">Kalung Chery</h3>
+                    <p class="text-gray-600">Rp18.000</p>
+                    <button class="mt-4 px-4 py-2 bg-pink-400 text-white rounded text-center inline-block view-product-btn" data-product="KalungChery" data-description="Kalung Cherry menampilkan ornamen berbentuk ceri yang cantik dan segar. Terbuat dari bahan berkualitas, cocok untuk gaya kasual maupun acara spesial. Elegan dan ringan, sempurna untuk melengkapi penampilan Anda." data-img="img/kalungchery.jpg">View Product</button>
+                </div>
+            </div>
+            <!-- Add more products here -->
+        </div>
+    </div>
+
+
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg w-1/3 text-center">
+            <img id="productImage" src="" alt="Product Image" class="w-full h-48 object-cover mb-4 rounded-lg">
+            <h3 id="productName" class="text-xl font-semibold mb-2"></h3>
+            <p id="productDescription" class="text-gray-600 mb-4"></p>
+            <a id="whatsappLink" href="#" target="_blank" class="inline-block px-6 py-2 bg-pink-500 text-white rounded-full">Order via WhatsApp</a>
+            <button id="closeModal" class="mt-4 px-4 py-2 bg-gray-500 text-white rounded-full">Close</button>
+        </div>
+    </div>
+<!--  Section -->
+<div class="container mx-auto text-center py-12">
+    <h1 class="text-3xl font-bold text-pink-600 mb-8">
+       Products Custom
+    </h1>
+    <div class="flex justify-center items-center space-x-4">
+        <button class="text-pink-600 text-2xl" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="flex overflow-hidden w-[75%]" id="productCarousel">
+            <div class="flex space-x-4 transition-transform duration-500 ease-in-out" id="carouselInner">
+                <!-- First Image -->
+                <div class="text-center w-1/3">
+                    <img alt="image/gelangcustom" class="mx-auto mb-4 rounded-full bg-pink-200 p-4" height="100" src="img/gelangcustom.jpg" width="100"/>
+                    <h2 class="text-xl font-semibold text-pink-600 mb-2">Gelang Custom</h2>
+                </div>
+                <!-- Second Image -->
+                <div class="text-center w-1/3">
+                    <img alt="image/KalungCustom" class="mx-auto mb-4 rounded-full bg-pink-200 p-4" height="100" src="img/KalungCustom.jpg" width="100"/>
+                    <h2 class="text-xl font-semibold text-pink-600 mb-2">Kalung Custom</h2>
+                </div>
+                <!-- Third Image -->
+                <div class="text-center w-1/3">
+                    <img alt="image/Ringcustom" class="mx-auto mb-4 rounded-full bg-pink-200 p-4" height="100" src="img/Ringcustom.jpg" width="100"/>
+                    <h2 class="text-xl font-semibold text-pink-600 mb-2">Cincin Custom</h2>
+                </div>
+                <!-- Fourth Image -->
+                <div class="text-center w-1/3">
+                    <img alt="image/gantungankuncicustom" class="mx-auto mb-4 rounded-full bg-pink-200 p-4" height="100" src="img/gantungankuncicustom.jpg" width="100"/>
+                    <h2 class="text-xl font-semibold text-pink-600 mb-2">Gantungan Kunci Custom</h2>
+                </div>
+                <!-- Fifth Image -->
+                <div class="text-center w-1/3">
+                    <img alt="image/phonestrapcustom" class="mx-auto mb-4 rounded-full bg-pink-200 p-4" height="100" src="img/phonestrapcustom.jpg" width="100"/>
+                    <h2 class="text-xl font-semibold text-pink-600 mb-2">Gantungan Hp Custom</h2>
+                </div>
+            </div>
+        </div>
+        <button class="text-pink-600 text-2xl" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+<script>
+    // Carousel functionality
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const carouselInner = document.getElementById('carouselInner');
+    let scrollAmount = 0;
+
+    const totalItems = carouselInner.children.length;
+    const visibleItems = 3;  // Number of items visible at once
+
+    // Scroll to the left
+    prevBtn.addEventListener('click', () => {
+        scrollAmount -= 1;
+        if (scrollAmount < 0) {
+            scrollAmount = totalItems - visibleItems;  // Loop back to the last set of images
+        }
+        updateCarouselPosition();
+    });
+
+    // Scroll to the right
+    nextBtn.addEventListener('click', () => {
+        scrollAmount += 1;
+        if (scrollAmount > totalItems - visibleItems) {
+            scrollAmount = 0;  // Loop back to the first set of images
+        }
+        updateCarouselPosition();
+    });
+
+    // Function to update carousel position
+    function updateCarouselPosition() {
+        const offset = scrollAmount * 200;  // Adjust scroll amount as needed
+        carouselInner.style.transform = `translateX(-${offset}px)`;
+    }
+        // Fitur pencarian
+document.getElementById('search').addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();  // Ambil kata kunci dan ubah menjadi lowercase
+    const products = document.querySelectorAll('.product-card');  // Ambil semua produk
+    
+    // Looping melalui produk
+    products.forEach(product => {
+        const productName = product.querySelector('h3').textContent.toLowerCase();  // Ambil nama produk dan ubah menjadi lowercase
+        const productDescription = product.querySelector('p').textContent.toLowerCase();  // Ambil deskripsi produk dan ubah menjadi lowercase
+        
+        // Cek apakah nama atau deskripsi produk mengandung kata kunci pencarian
+        if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
+            product.style.display = 'block';  // Tampilkan produk jika cocok
+        } else {
+            product.style.display = 'none';  // Sembunyikan produk jika tidak cocok
+        }
+    });
+});
+    // Function to show the modal with product details
+    document.querySelectorAll('.view-product-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            // Get the product details from the button's data attributes
+            const productName = event.target.getAttribute('data-product');
+            const productDescription = event.target.getAttribute('data-description');
+            const productImg = event.target.getAttribute('data-img');
+            
+            // Set the modal content
+            document.getElementById('productName').textContent = productName;
+            document.getElementById('productDescription').textContent = productDescription;
+            document.getElementById('productImage').src = productImg;
+
+           // Update WhatsApp link (you can customize the message if needed)
+document.getElementById('whatsappLink').href = `https://wa.me/6282124708761?text=Hi, I would like to order ${productName}`;
+
+
+            // Show the modal
+            document.getElementById('productModal').classList.remove('hidden');
+        });
+    });
+
+    // Function to close the modal
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('productModal').classList.add('hidden');
+    });
+</script>
+<body class="bg-purple-200 text-gray-700">
+    <!-- Pastikan body hanya ada satu elemen <body> -->
+ <footer class="bg-gray-900 text-white py-8">
+     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+         <!-- Logo Section -->
+         <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
+             <img alt="Pink flower" class="w-16 h-16 mb-4 rounded-full" height="100" src="img/logomanikmanik.jpg" width="100"/>
+         </div>
+ 
+ 
+             <!-- Links Section -->
+             <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
+                <h2 class="text-3xl font-bold mb-2">Links</h2>
+
+                 <ul>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="index.html" class="text-white">Home</a>
+                     </li> <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="shop.html" class="text-white">Shop</a>
+                     </li>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="about.html" class="text-white">About Us</a>
+                     </li>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="contact.html" class="text-white">Contact Us</a>
+                     </li>
+                 </ul>
+             </div>
+ 
+            <!-- Contact Information Section -->
+ <div class="flex flex-col items-center md:items-start">
+     <ul>
+         <li class="mb-2">
+             <i class="fas fa-chevron-right mr-2"></i>
+             Maniekbydo
+         </li>
+         <li class="mb-2">
+             <i class="fas fa-chevron-right mr-2"></i>
+             <a href="https://wa.me/6282124708761" class="text-white">+6282124708761</a>
+         </li>
+     </ul>
+     <div class="flex space-x-4 mt-4">
+         <!-- WhatsApp Icon -->
+         <a class="text-green-500" href="https://wa.me/6282124708761">
+             <i class="fab fa-whatsapp"></i>
+         </a>
+         <!-- Instagram Icon -->
+         <a class="text-blue-500" href="https://www.instagram.com/Maniekbydo/">
+             <i class="fab fa-instagram"></i>
+         </a>
+     </div>
+ </div>
+         </div>
+         <!-- Footer Copyright -->
+         <div class="text-center mt-8">
+             <p>© Maniekbydo 2024. All rights reserved.</p>
+         </div>
+ 
+         <!-- Scroll to Top Button -->
+         <div class="fixed bottom-4 right-4">
+             <a class="bg-blue-500 text-white p-3 rounded-full shadow-lg" href="#">
+                 <i class="fas fa-arrow-up"></i>
+             </a>
+         </div>
+     </footer>
+ </body>
+ </html>

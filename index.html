@@ -1,247 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>UCP 2 - 170, 176, 179</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        
+<head>
+    <meta charset="utf-8">
+    <title>Maniekbydo</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+    <style>
+    
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a; /* Default text color */
+}
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+/* Header Styling */
+.header {
+    background-color: #f8c1d1;
+}
+
+.header a {
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header a:active {
+    transform: scale(1.05);
+}
+
+/* Navbar Styling */
+.navbar-nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.nav {
+    background-color: #000000;
+}
+
+nav {
+    background-color: #E5D9F2;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Navbar Link Styling */
+.nav-link {
+    color: #E195AB !important;
+    padding: 0 9px;
+}
+
+.nav-link:hover {
+    color: #FF6347;
+    text-decoration: underline;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hero-text h1 {
+    color: #F08080;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Shop Button */
+.shop-now-btn {
+    background-color: #FFB6C1;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.shop-now-btn:hover {
+    background-color: #ed7db5;
+    transform: translateY(-3px);
+}
+
+/* Full Image Styling */
+.full-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Press Section Styling */
+.press-section {
+    background-image: url('img/backgroundkontak.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 200px 0;
+    text-align: center;
+    color: white;
+}
+
+.press-section h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.press-section h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+}
+
+/* Form Section Styling */
+.form-section {
+    background-image: url('img/form.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 80px 0;
+}
+
+.form-container {
+    padding: 2rem;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    background-color: #FF6F61;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.form-container button:hover {
+    background-color: #e65f51;
+    transform: translateY(-2px);
+}
 
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+/* Remove bullet points from the footer links */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
 
-    <body>
+footer {
+    background-color: #0B192C;
+    color: white;
+    padding: 0.5rem 0; /* Padding untuk footer */
+}
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+
+
+
+/* Links Section Styling */
+footer .footer-links ul,
+footer .contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-links ul li,
+footer .contact-info ul li {
+    margin-bottom: 10px;
+}
+
+footer .footer-links ul li a,
+footer .contact-info ul li a {
+    color: white; /* Menjadikan link berwarna putih */
+    text-decoration: none;
+}
+
+footer .footer-links ul li a:hover,
+footer .contact-info ul li a:hover {
+    color: #FF6347;
+    text-decoration: underline;
+}
+
+/* Contact Icons Styling */
+footer .contact-info .flex a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .contact-info .flex a:hover {
+    color: #e65f51;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FF6347;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+    background-color: #e65f51;
+}
+
+/* Footer Content Flex Layout */
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .container > div {
+    margin-bottom: 1rem;
+}
+
+footer .container .footer-logo {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+footer .container .footer-links,
+footer .container .contact-info {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+/* Footer Layout on Larger Screens */
+@media (min-width: 768px) {
+    footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer .footer-logo {
+        flex-basis: 20%;
+    }
+
+    footer .footer-links,
+    footer .contact-info {
+        flex-basis: 40%;
+    }
+
+    footer .footer-links ul,
+    footer .contact-info ul {
+        text-align: left;
+    }
+
+    footer .footer-links ul li,
+    footer .contact-info ul li {
+        margin-bottom: 15px;
+    }
+}
+
+/* Scroll to Top Button on Larger Screens */
+@media (min-width: 768px) {
+    .scroll-to-top {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+.logo {
+    height: 55px; /* Ukuran logo */
+    width: 55px;  /* Ukuran logo */
+    border-radius: 50%; /* Membuat logo berbentuk bulat */
+    object-fit: cover; /* Memastikan gambar terpotong dengan rapi */
+    margin-top: 0; /* Menghapus margin negatif */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Menyusun logo dan teks secara vertikal */
+    justify-content: center; /* Menyusun logo dan teks secara horizontal */
+}
+.section-title-with-lines {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px; /* Tambahkan ruang di sekitar teks */
+}
+
+.section-title-with-lines::before,
+.section-title-with-lines::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: #000; /* Warna garis */
+    transform: translateY(-50%);
+}
+
+.section-title-with-lines::before {
+    left: -60px; /* Jarak dari teks */
+}
+
+.section-title-with-lines::after {
+    right: -60px; /* Jarak dari teks */
+}
+
+    </style>
+</head>
+
+<body class="text-gray-800">
+    <!-- Top Header -->
+    <div class="header bg-blue-900 text-white" style="padding-top: 6px; padding-bottom: 6px;">
+        <div class="d-flex align-items-center" style="margin-left: 0; padding-left: 20px;">
+            <div class="d-flex align-items-center">
+                <a href="tel:+6282124708761" class="text-white me-3">
+                    <i class="fas fa-phone-alt"></i> +62821-2470-8761
+                </a>
+                <a href="https://www.instagram.com/maniekbydo" target="_blank" class="text-white">
+                    <i class="fab fa-instagram"></i> Maniekbydo
+                </a>
             </div>
         </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
-                    <img src="img/logo.png" alt="FlowerShop Logo" style="height: 40px; width: auto;">
-                    <span style="font-size: 1.5em; font-weight: bold; margin-left: 10px;">FlowerShop</span>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-4">
+        <div class="container d-flex align-items-center justify-content-between position-relative">
+            <div class="d-flex align-items-center me-auto">
+                <a href="index.html" class="text-pink-300 nav-link">Home</a>
+                <a href="shop.html" class="text-pink-300 nav-link">Shop</a>
+                <a href="about.html" class="text-pink-300 nav-link">About Us</a>
+                <a href="contact.html" class="text-pink-300 nav-link">Contact Us</a>
+            </div>
+    
+            <div class="position-absolute start-50 translate-middle text-center d-flex align-items-center" style="top: 10px;">
+                <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
+                    <img src="img/logomanikmanik.jpg" alt="Maniekbydo Logo" class="logo">
+                    <span style="color: #E195AB; font-size: 2.3rem; font-weight: bold; margin-left: 15px;">Maniekbydo</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            </div>
         </div>
-        
-        
-        
+    </nav>
+    
 
-            <!-- Carousel Start -->
-            <div class="carousel-header">
-                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <video autoplay loop muted class="video-background" style="width: 100%; height: auto;">
-                                <source src="img/videobunga.mp4" type="video/mp4">
+    <!-- Full Screen Image with "Shop Now" Button -->
+<div class="hero-section">
+    <img src="img/index.avif" alt="Full Image" class="full-image">
+    <div class="hero-text">
+        <h1>Welcome to Maniekbydo</h1>
+        <p>Explore our beautiful handmade beads and accessories!</p>
+        <a href="shop.html" class="shop-now-btn">Shop Now</a>
+    </div>
+</div>
 
-                            </video>
-                            <div class="carousel-caption">
-                                <div class="p-3" style="max-width: 900px;">
 
-                                    <h1 class="display-2 text-capitalize text-white mb-4">Blossom Your Day!</h1>
-                                    <p class="mb-5 fs-5">Our flowers bring color and joy to your special moments. Experience the beauty of our expertly curated blooms, perfect for every occasion.
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="about.html">About</a>
-                                    </div>
-                                </div>
-                            </div>
+
+    <!-- Content Section -->
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row no-gutters ftco-services">
+                <!-- Card 1 -->
+                <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services mb-md-0 mb-4 mt-4">
+                        <div class="icon d-flex justify-content-center align-items-center mb-4" style="background-color: #FF69B4; border-radius: 50%; padding: 25px; width: 90px; height: 90px; margin: auto;">
+                            <i class="fa fa-cogs fa-3x" style="color: white;"></i> <!-- Warna pink cerah -->
                         </div>
+                        <div class="media-body">
+                            <h3 class="heading">Desain Custom</h3>
+                            <span>Kami menyediakan layanan desain manik-manik khusus untuk memberikan sentuhan unik pada setiap produk Anda.</span>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4 mt-4">
+                    <div class="icon d-flex justify-content-center align-items-center mb-4" style="background-color: #FF1493; border-radius: 50%; padding: 25px; width: 90px; height: 90px; margin: auto;">
+                        <i class="fa fa-gem fa-3x" style="color: white;"></i> <!-- Warna pink tua -->
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Kualitas Terbaik</h3>
+                        <span>Kami hanya menggunakan bahan berkualitas tinggi dalam setiap produk manik-manik yang kami tawarkan, memastikan Anda mendapatkan produk yang tahan lama dan bernilai tinggi.</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Card 3 -->
+            <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4 mt-4">
+                    <div class="icon d-flex justify-content-center align-items-center mb-4" style="background-color: #FFB6C1; border-radius: 50%; padding: 25px; width: 90px; height: 90px; margin: auto;">
+                        <i class="fa fa-shopping-cart fa-3x" style="color: white;"></i> <!-- Warna pink lembut -->
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Online Order</h3>
+                        <span>Pemesanan mudah dilakukan melalui WhatsApp. Pilih produk yang Anda sukai dan kirimkan pesan ke kami untuk melakukan pemesanan. Kami akan segera mengonfirmasi pesanan dan pengiriman Anda.</span>
+                    </div>
+                </div>
+            </div>
 
-   
+            <!-- Card 4 -->
+            <div class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4 mt-4">
+                    <div class="icon d-flex justify-content-center align-items-center mb-4" style="background-color: #D500F9; border-radius: 50%; padding: 25px; width: 90px; height: 90px; margin: auto;">
+                        <i class="fa fa-headset fa-3x" style="color: white;"></i> <!-- Warna pink ungu -->
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Support</h3>
+                        <span>Tim layanan pelanggan kami siap memberikan dukungan 24/7, menjawab setiap pertanyaan Anda dan membantu dengan pemesanan atau masalah lainnya.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- About Start -->
-<div class="container-fluid about py-5" id="about">
+<div class="container-fluid about py-5" id="about" style="background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(img/home.jpg); background-size: cover; background-position: center;">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
-                <div class="h-100" style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
-                    <img src="img/bungadaisy.jpg" class="img-fluid w-100 h-100" alt="About Us">
+                <div class="h-100" style="border: 50px solid transparent;">
+                    <img src="img/gambarhome.jpg" class="img-fluid w-100 h-100" alt="About Us">
                 </div>
             </div>
-            <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/image.png);">
-
-                <h1 class="mb-4">Selamat Datang di <span class="text-primary">FlowerShop</span></h1>
-                <p class="mb-4">Di FlowerShop, kami merayakan pesona dan kesederhanaan bunga daisy. Dikenal karena penampilannya yang cerah dan ceria, bunga daisy adalah simbol kemurnian, kepolosan, dan awal yang baru.</p>
-                <p class="mb-4">Bunga daisy kami dipetik dengan tangan dan disusun dengan hati-hati oleh florist ahli kami untuk memastikan setiap buket memancarkan kebahagiaan dan kesegaran. Apakah Anda ingin menyemangati seseorang atau mendekorasi rumah Anda, rangkaian bunga daisy kami adalah pilihan yang sempurna.</p>
-                <p class="mb-4">Kunjungi kami untuk menjelajahi koleksi buket bunga daisy kami dan biarkan keindahan abadi bunga ini membawa senyuman.</p>
+            <div class="col-lg-7">
+                <h1 class="mb-4">Selamat Datang di <span class="text-primary">Maniekbydo</span></h1>
+                <p class="mb-4">Maniekbydo adalah toko yang menawarkan berbagai produk berbahan dasar manik-manik dengan kualitas terbaik. Kami menyediakan cincin, gelang, kalung, hingga hiasan yang dirancang untuk melengkapi gaya Anda.</p>
+               
+                
             </div>
         </div>
     </div>
 </div>
 <!-- About End -->
 
-
-
-
-                    
-        <!-- card Start -->
    
-        <div class="container-fluid destination py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Bunga Kami</h5>
-                    <h1 class="mb-0">Bunga Populer</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img class="card-img-top img-fluid rounded" src="img/bungamatahari.jpg" alt="Bunga Matahari">
-                            <div class="card-body">
-                                <h4 class="card-title">Bunga Matahari</h4>
-                                <p class="card-text">Bunga Matahari melambangkan kebahagiaan, kehangatan, dan energi positif. Cocok untuk memberikan kesan ceria dan menyegarkan.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img class="card-img-top img-fluid rounded" src="img/bungamawar.jpeg" alt="Bunga Mawar">
-                            <div class="card-body">
-                                <h4 class="card-title">Bunga Mawar</h4>
-                                <p class="card-text">Bunga Mawar melambangkan cinta dan keindahan. Bunga ini sering digunakan untuk menyampaikan perasaan yang mendalam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img class="card-img-top img-fluid rounded" src="img/bungatulip.jpg" alt="Bunga Tulip">
-                            <div class="card-body">
-                                <h4 class="card-title">Bunga Tulip</h4>
-                                <p class="card-text">Bunga Tulip melambangkan cinta yang sempurna dan kenyamanan. Cocok untuk berbagai momen spesial.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        <!-- Tentang Kami Start -->
-        <div class="container-fluid gallery py-5 my-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">Tentang Kami</h5>
-                <h1 class="mb-4">FlowerShop.</h1>
-                <p class="mb-0">FlowerShop adalah destinasi terbaik untuk menemukan berbagai macam bunga segar dan indah, siap untuk menghiasi setiap momen istimewa dalam hidup Anda dengan keindahannya yang memukau.
-                </p>
-                <p class="mt-4">Untuk informasi lebih lanjut atau untuk memesan perjalanan Anda, silakan hubungi kami melalui tombol di bawah ini.</p>
-                <div class="d-flex align-items-center justify-content-center mt-4">
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="contact.html">Contact Us</a>
-                </div>
-            </div>
-        </div>
-         <!-- Tentang Kami End -->
-
-<!-- CSS -->
-<style>
-    .footer-logo {
-        font-size: 6em; /* Sesuaikan ukuran sesuai kebutuhan */
-        margin-top: 20px; /* Menempatkan logo lebih ke bawah */
-    }
-</style>
-
-<!-- Footer Start -->
-<div class="container-fluid footer py-5">
+      <!-- Card Start -->
+<div class="container-fluid destination py-5">
     <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-md-6 col-lg-6 col-xl-3 d-flex justify-content-center">
-                <div class="footer-item d-flex flex-column align-items-center">
-                    <a href="#"><img src="img/logo.png" alt="FlowerShop Logo" class="footer-logo mb-4" style="height: 60px; width: auto;"></a>
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3 section-title-with-lines text-uppercase text-primary">
+                <span class="line-left"></span> Koleksi Kami <span class="line-right"></span>
+            </h5>
+        </div>
+
+
+
+    
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card card-hover">
+                    <img class="card-img-top img-fluid rounded" src="img/gelangcustom.jpg" alt="Gelang Manik-Manik">
+                    <div class="card-body">
+                        <h4 class="card-title">Gelang </h4>
+                        <p class="card-text">Gelang manik-manik dengan desain unik dan modern, sempurna untuk melengkapi tampilan sehari-hari Anda. Dibuat dengan detail dan bahan berkualitas tinggi.</p>
+                    </div>
+                </div>
+            </div>                
+            <div class="col-lg-4">
+                <div class="card card-hover">
+                    <img class="card-img-top img-fluid rounded" src="img/phonestrapcustom.jpg" alt="Phone Strap Custom">
+                    <div class="card-body">
+                        <h4 class="card-title">Phone Strap </h4>
+                        <p class="card-text">Phone strap custom yang unik dan penuh gaya. Didesain sesuai keinginan Anda dengan manik-manik berkualitas tinggi untuk melengkapi gadget Anda dengan sentuhan personal.</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- Kolom-kolom lainnya -->
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
-                    <h4 class="mb-4 text-white">Links</h4>
-                    <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
-                    <a href="about.html"><i class="fas fa-angle-right me-2"></i> About</a>
-                    <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+            
+            <div class="col-lg-4">
+                <div class="card card-hover">
+                    <img class="card-img-top img-fluid rounded" src="img/Ringcustom.jpg" alt="Cincin Custom">
+                    <div class="card-body">
+                        <h4 class="card-title">Cincin </h4>
+                        <p class="card-text">Cincin custom dengan desain manik-manik yang unik dan personal. Pilihan sempurna untuk mengekspresikan gaya Anda dengan sentuhan elegan dan kreatif.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
-                    <a href="mailto:flowershop@example.com"><i class="fas fa-angle-right me-2"></i> flowershop@example.com</a>
-                    <a href="https://wa.me/1234567890"><i class="fas fa-angle-right me-2"></i> +012 345 67890</a>
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-share fa-2x text-white me-2"></i>
-                        <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.facebook.com/yourprofile"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.twitter.com/yourprofile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn-square btn btn-primary rounded-circle mx-1" href="https://www.instagram.com/yourprofile"><i class="fab fa-instagram"></i></a>
-
+            <div class="col-lg-4">
+                <div class="card card-hover">
+                    <img class="card-img-top img-fluid rounded" src="img/KalungCustom.jpg" alt="Kalung Custom">
+                    <div class="card-body">
+                        <h4 class="card-title">Kalung </h4>
+                        <p class="card-text">Ciptakan kalung dengan desain pribadi Anda, tersedia dalam berbagai pilihan panjang dan aksen unik yang membuat setiap kalung menjadi lebih berarti dan mencerminkan karakter Anda.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-hover">
+                    <img class="card-img-top img-fluid rounded" src="img/gantungankuncicustom.jpg" alt="Gantungan Kunci Custom">
+                    <div class="card-body">
+                        <h4 class="card-title">Gantungan Kunci </h4>
+                        <p class="card-text">Gantungan kunci dengan desain manik-manik yang dapat disesuaikan, memberikan sentuhan personal yang unik dan cocok sebagai aksesoris sehari-hari maupun hadiah spesial.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Footer End -->
 
-<footer class="container-fluid text-center py-3 bg-dark text-white">
-    <p>&copy; Flowershop 2024. All rights reserved.</p>
-</footer>
+<style>
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+</style>
+<!-- Card End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+<!-- Mengapa Memilih Maniekbydo Start -->
+<div class="container-fluid gallery py-5 my-5">
+    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+        <h5 class="section-title px-3 section-title-with-lines text-uppercase text-primary">Mengapa Memilih Maniekbydo</h5>
+        <h1 class="mb-4">Maniekbydo</h1>
+        <p class="mb-0">Maniekbydo adalah pilihan terbaik bagi Anda yang ingin mendapatkan aksesori manik-manik berkualitas tinggi, dengan desain unik dan personalisasi yang sesuai dengan gaya Anda. Setiap produk kami dibuat dengan penuh cinta dan perhatian terhadap detail, memastikan Anda mendapatkan sesuatu yang istimewa.</p>
+        <p class="mt-4">Untuk informasi lebih lanjut atau untuk memesan produk kami, silakan hubungi kami melalui tombol di bawah ini.</p>
+        <div class="d-flex align-items-center justify-content-center mt-4">
+            <a class="btn btn-primary rounded-pill py-3 px-5" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</div>
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+<!-- Mengapa Memilih Maniekbydo End -->
 
-</html>
+<!-- Testimony Start -->
+<section class="ftco-section testimony-section bg-light py-5">
+    <div class="container">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3 section-title-with-lines text-uppercase text-primary">Testimoni Pelanggan</h5>
+            <h1 class="mb-4">Apa Kata Pelanggan Kami</h1>
+        </div>
+
+
+
+
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4">
+                <div class="testimonial-item p-4 text-center bg-white shadow-sm rounded">
+                    <p class="fs-5 mb-4">"Produl manik-manik dari Maniekbydo selalu memberikan desain yang sesuai dengan harapan saya!"</p>
+                    <h6 class="font-weight-bold">Hasna</h6>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="col-md-4">
+                <div class="testimonial-item p-4 text-center bg-white shadow-sm rounded">
+                    <p class="fs-5 mb-4">"Saya sangat puas dengan layanan desain custom mereka. Hasilnya sangat memuaskan dan sesuai dengan yang saya inginkan!"</p>
+                    <h6 class="font-weight-bold">Putri</h6>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="col-md-4">
+                <div class="testimonial-item p-4 text-center bg-white shadow-sm rounded">
+                    <p class="fs-5 mb-4">"Produk manik-manik dari Maniekbydo sangat berkualitas dan selalu memenuhi ekspektasi saya. Saya pasti akan membeli lagi!"</p>
+                    <h6 class="font-weight-bold">Ola</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimony End -->
+
+<body class="bg-purple-200 text-gray-700">
+    <!-- Pastikan body hanya ada satu elemen <body> -->
+ <footer class="bg-gray-900 text-white py-8">
+     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+         <!-- Logo Section -->
+         <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
+            <img src="img/logomanikmanik.jpg" alt="Maniekbydo Logo" class="logo">
+
+         </div>
+ 
+ 
+             <!-- Links Section -->
+             <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
+                <h2 class="text-xs font-bold mb-2 text-white">Links</h2>
+                 <ul>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="index.html" class="text-white">Home</a>
+                     </li> <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="shop.html" class="text-white">Shop</a>
+                     </li>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="about.html" class="text-white">About Us</a>
+                     </li>
+                     <li class="mb-2">
+                         <i class="fas fa-chevron-right mr-2"></i>
+                         <a href="contact.html" class="text-white">Contact Us</a>
+                     </li>
+                 </ul>
+             </div>
+ 
+            <!-- Contact Information Section -->
+ <div class="flex flex-col items-center md:items-start">
+     <ul>
+         <li class="mb-2">
+             <i class="fas fa-chevron-right mr-2"></i>
+             Maniekbydo
+         </li>
+         <li class="mb-2">
+             <i class="fas fa-chevron-right mr-2"></i>
+             <a href="https://wa.me/6282124708761" class="text-white">+6282124708761</a>
+         </li>
+     </ul>
+     <div class="flex space-x-4 mt-4">
+         <!-- WhatsApp Icon -->
+         <a class="text-green-500" href="https://wa.me/6282124708761">
+             <i class="fab fa-whatsapp"></i>
+         </a>
+         <!-- Instagram Icon -->
+         <a class="text-blue-500" href="https://www.instagram.com/Maniekbydo/">
+             <i class="fab fa-instagram"></i>
+         </a>
+     </div>
+ </div>
+         </div>
+         <!-- Footer Copyright -->
+         <div class="text-center mt-8">
+             <p>© Maniekbydo 2024. All rights reserved.</p>
+         </div>
+ 
+         <!-- Scroll to Top Button -->
+         <div class="fixed bottom-4 right-4">
+             <a class="bg-blue-500 text-white p-3 rounded-full shadow-lg" href="#">
+                 <i class="fas fa-arrow-up"></i>
+             </a>
+         </div>
+     </footer>
+ </body>
+ </html>
+ 
